@@ -85,43 +85,27 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <Button
-            android:id="@+id/zoomBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:text="Zoom"
-            android:textSize="14sp" />
-
-        <Button
-            android:id="@+id/eatBtn"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Eat"
-            android:textSize="14sp" />
     </LinearLayout>
 
     <Button
         android:id="@+id/upBtn"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:layout_marginEnd="160dp"
+        android:layout_marginEnd="8dp"
         android:text="R"
         android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="631dp" />
+        app:layout_constraintBottom_toTopOf="@+id/downBtn"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/downBtn"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="260dp"
+        android:layout_marginBottom="16dp"
         android:text="D"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/upBtn"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/upBtn" />
+        app:layout_constraintEnd_toStartOf="@+id/upBtn" />
 
     <Button
         android:id="@+id/leftbtn"
@@ -130,7 +114,8 @@
         android:text="L"
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/downBtn"
-        app:layout_constraintEnd_toStartOf="@+id/downBtn" />
+        app:layout_constraintEnd_toStartOf="@+id/downBtn"
+        app:layout_constraintTop_toBottomOf="@+id/rightBtn" />
 
     <Button
         android:id="@+id/rightBtn"
@@ -138,8 +123,8 @@
         android:layout_height="48dp"
         android:text="U"
         android:textSize="14sp"
-        tools:layout_editor_absoluteX="363dp"
-        tools:layout_editor_absoluteY="795dp" />
+        app:layout_constraintBottom_toTopOf="@+id/upBtn"
+        app:layout_constraintEnd_toStartOf="@+id/upBtn" />
 
     <TextView
         android:id="@+id/textView18"
@@ -201,5 +186,47 @@
         app:layout_constraintBottom_toBottomOf="@+id/textView21"
         app:layout_constraintStart_toEndOf="@+id/textView21"
         app:layout_constraintTop_toTopOf="@+id/textView21" />
+
+    <Button
+        android:id="@+id/zoomBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Zoom"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/eatBtn"
+        app:layout_constraintEnd_toEndOf="@+id/eatBtn"
+        app:layout_constraintStart_toStartOf="@+id/eatBtn" />
+
+    <Button
+        android:id="@+id/eatBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Eat"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:clickable="true"
+        app:layout_constraintEnd_toEndOf="@+id/resetBtn"
+        app:layout_constraintTop_toBottomOf="@+id/resetBtn"
+        app:srcCompat="?attr/actionModeCutDrawable" />
+
+    <edu.sdsmt.hamsterrunwilsonadeline.GameBoardView
+        android:id="@+id/gameBoardView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/rightBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView22" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
