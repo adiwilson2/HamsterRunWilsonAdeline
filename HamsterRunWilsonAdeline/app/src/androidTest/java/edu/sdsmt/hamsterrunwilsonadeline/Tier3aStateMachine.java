@@ -22,10 +22,7 @@ import org.junit.runner.RunWith;
 import java.util.concurrent.atomic.AtomicReference;
 
 //import edu.sdsmt.rebenitsch.hamsterrun.States.BaseHamster;
-import edu.sdsmt.hamsterrunwilsonadeline.BaseHamster;
-import edu.sdsmt.hamsterrunwilsonadeline.EndedGame;
-import edu.sdsmt.hamsterrunwilsonadeline.HeavyHamster;
-import edu.sdsmt.hamsterrunwilsonadeline.ZoomingHamster;
+
 
 //import edu.sdsmt.rebenitsch.hamsterrun.States.EndedGame;
 //import edu.sdsmt.rebenitsch.hamsterrun.States.HeavyHamster;
@@ -133,7 +130,7 @@ public class Tier3aStateMachine {
         onView(withId(R.id.downBtn)).perform(click());
 
 
-        onView(withId(R.id.zoomBtn)).perform(click());
+        onView(withId(R.id.zoom)).perform(click());
         assertEquals(ZoomingHamster.class.getName(), sm.getCurrentStateName());
 
         //need to eat to keep going
@@ -142,7 +139,7 @@ public class Tier3aStateMachine {
         onView(withId(R.id.upBtn)).perform(click());
         assertEquals(10, g.getEnergy());
 
-        onView(withId(R.id.zoomBtn)).perform(click());
+        onView(withId(R.id.zoom)).perform(click());
         assertEquals(ZoomingHamster.class.getName(), sm.getCurrentStateName());
         onView(withId(R.id.rightBtn)).perform(click());
         onView(withId(R.id.rightBtn)).perform(click());
@@ -175,7 +172,7 @@ public class Tier3aStateMachine {
         onView(withId(R.id.rightBtn)).perform(click());
         assertEquals(HeavyHamster.class.getName(), sm.getCurrentStateName());
 
-        onView(withId(R.id.zoomBtn)).perform(click());
+        onView(withId(R.id.zoom)).perform(click());
         assertEquals(ZoomingHamster.class.getName(), sm.getCurrentStateName());
         onView(withId(R.id.leftbtn)).perform(click());
         onView(withId(R.id.upBtn)).perform(click());
@@ -203,7 +200,7 @@ public class Tier3aStateMachine {
             gameAtom.set(act.getGame());
             smAtom.set(act.getStateMachine());
 
-            zoomBtnAtom.set(act.findViewById(R.id.zoomBtn));
+            zoomBtnAtom.set(act.findViewById(R.id.zoom));
             eatBtnAtom.set(act.findViewById(R.id.eatBtn));
             resetBtnAtom.set(act.findViewById(R.id.resetBtn));
             upBtnAtom.set(act.findViewById(R.id.upBtn));

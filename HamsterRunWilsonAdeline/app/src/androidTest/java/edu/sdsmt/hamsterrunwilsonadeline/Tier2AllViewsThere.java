@@ -88,7 +88,7 @@ public class Tier2AllViewsThere {
             gameAtom.set(act.getGame());
             smAtom.set(act.getStateMachine());
 
-            zoomBtnAtom.set(act.findViewById(R.id.zoomBtn));
+            zoomBtnAtom.set(act.findViewById(R.id.zoom));
             eatBtnAtom.set(act.findViewById(R.id.eatBtn));
             resetBtnAtom.set(act.findViewById(R.id.resetBtn));
             upBtnAtom.set(act.findViewById(R.id.upBtn));

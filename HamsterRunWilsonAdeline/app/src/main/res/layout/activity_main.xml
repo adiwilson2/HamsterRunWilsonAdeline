@@ -188,7 +188,7 @@
         app:layout_constraintTop_toTopOf="@+id/textView21" />
 
     <Button
-        android:id="@+id/zoomBtn"
+        android:id="@+id/zoom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Zoom"
@@ -218,7 +218,7 @@
         app:layout_constraintTop_toBottomOf="@+id/resetBtn"
         app:srcCompat="?attr/actionModeCutDrawable" />
 
-    <edu.sdsmt.hamsterrunwilsonadeline.GameBoardView
+    <edu.sdsmt.hamsterrunwilsonadeline.GameView
         android:id="@+id/gameBoardView"
         android:layout_width="0dp"
         android:layout_height="0dp"
